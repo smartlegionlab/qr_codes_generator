@@ -12,6 +12,16 @@ from tools.manager import AppManager
 def main():
     app_manager = AppManager()
     app_manager.show_head()
+
+    img_path = app_manager.get_image_path()
+    save_folder = app_manager.get_save_folder()
+
+    app_manager.printer.echo()
+    print(f'Path to image file: {img_path}')
+    app_manager.printer.echo()
+    print(f'Path to the folder to save the final file: {save_folder}')
+    app_manager.printer.echo()
+
     app_manager.show_footer()
 
 
