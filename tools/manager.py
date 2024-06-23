@@ -12,6 +12,8 @@ from tools.config import AppConfig
 from tools.printer import SmartPrinter
 import readline
 
+from tools.qr_code_master import QrCodeMaster
+
 
 def input_with_completion(prompt):
     readline.set_completer_delims(' \t\n;')
@@ -27,6 +29,7 @@ class AppManager:
     def __init__(self):
         self.config = AppConfig()
         self.printer = SmartPrinter()
+        self.qr_code_master = QrCodeMaster()
 
     def show_head(self):
         self.printer.echo(char='*')
@@ -65,3 +68,12 @@ class AppManager:
                 print(f'ERROR! Please enter correct URL!')
                 continue
             return url
+
+    @staticmethod
+    def get_name_of_the_final_file():
+        while 1:
+            name = input(f'Enter the name of the final file: ')
+            if len(name) <= 0:
+                print(f'ERROR! Please enter correct name!')
+                continue
+            return name
