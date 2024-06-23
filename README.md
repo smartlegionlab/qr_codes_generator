@@ -1,4 +1,4 @@
-# qr_codes_generator <sup>v0.0.1</sup>
+# qr_codes_generator <sup>v0.0.2</sup>
 Qr codes generator.
 
 ---
@@ -13,6 +13,17 @@ Author and developer: ___A.A. Suvorov___
 - `source venv/bin/activate`
 - `pip install -r requirements.txt`
 - `python app.py`
+
+After launch:
+
+- Enter text or url.
+- Enter the name of the final fileа.
+
+1. A folder "qr_codes" will be created in which a file with the specified name will appear.
+
+Example:
+
+<img alt="Smart Legion Lab" src="data/images/smartlegionlab.png">
 
 ***
 
