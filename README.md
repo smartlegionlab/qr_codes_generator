@@ -1,4 +1,4 @@
-# qr_codes_generator
+# qr_codes_generator <sup>v0.0.1</sup>
 Qr codes generator.
 
 ---
@@ -9,7 +9,10 @@ Author and developer: ___A.A. Suvorov___
 
 ## Help:
 
-`python app.py`
+- `python -m venv venv`
+- `source venv/bin/activate`
+- `pip install -r requirements.txt`
+- `python app.py`
 
 ***
 

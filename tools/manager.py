@@ -40,32 +40,11 @@ class AppManager:
         self.printer.echo(text=self.config.url, char='=')
 
     @staticmethod
-    def get_image_path():
-        while 1:
-            image_file_path = input_with_completion('Enter the path to the image in *.png format: ')
-            if not os.path.isfile(image_file_path):
-                print(f'ERROR! File not found.')
-                continue
-            if not image_file_path.endswith('.png'):
-                print(f'ERROR! Invalid file format. Specify the path to the file in *.png format.')
-                continue
-            return image_file_path
-
-    @staticmethod
-    def get_save_folder():
-        while 1:
-            directory_path = input_with_completion(f'Enter the path to the folder to save the received file: ')
-            if not os.path.exists(directory_path):
-                print("ERROR! The specified directory does not exist.")
-                continue
-            return directory_path
-
-    @staticmethod
     def get_url():
         while 1:
-            url = input(f'Enter URL: ')
+            url = input(f'Enter text or URL: ')
             if len(url) <= 0:
-                print(f'ERROR! Please enter correct URL!')
+                print(f'ERROR! Please enter correct text or URL!')
                 continue
             return url
 

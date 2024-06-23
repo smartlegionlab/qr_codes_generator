@@ -14,20 +14,15 @@ def main():
 
     app_manager.show_head()
 
-    # img_path = app_manager.get_image_path()
-    # save_folder = app_manager.get_save_folder()
     url = app_manager.get_url()
     file_name = app_manager.get_name_of_the_final_file()
     app_manager.printer.echo()
-    # print(f'Path to image file: {img_path}')
-    # app_manager.printer.echo()
-    # print(f'Path to the folder to save the final file: {save_folder}')
-    # app_manager.printer.echo()
-    print(f'URL: {url}')
+    print(f'Text or URL: {url}')
     app_manager.printer.echo()
     print(f'File name: {file_name}')
     app_manager.printer.echo()
     app_manager.qr_code_master.create_qr_code_file(data=url, file_name=file_name)
+    app_manager.printer.echo()
     app_manager.show_footer()
 
 
