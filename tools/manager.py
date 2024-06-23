@@ -10,6 +10,16 @@ import os
 
 from tools.config import AppConfig
 from tools.printer import SmartPrinter
+import readline
+
+
+def input_with_completion(prompt):
+    readline.set_completer_delims(' \t\n;')
+    readline.parse_and_bind("tab: complete")
+
+    user_input = input(prompt)
+
+    return user_input
 
 
 class AppManager:
@@ -29,7 +39,7 @@ class AppManager:
     @staticmethod
     def get_image_path():
         while 1:
-            image_file_path = input('Enter the path to the image in *.png format: ')
+            image_file_path = input_with_completion('Enter the path to the image in *.png format: ')
             if not os.path.isfile(image_file_path):
                 print(f'ERROR! File not found.')
                 continue
@@ -41,8 +51,17 @@ class AppManager:
     @staticmethod
     def get_save_folder():
         while 1:
-            directory_path = input(f'Enter the path to the folder to save the received file: ')
+            directory_path = input_with_completion(f'Enter the path to the folder to save the received file: ')
             if not os.path.exists(directory_path):
                 print("ERROR! The specified directory does not exist.")
                 continue
             return directory_path
+
+    @staticmethod
+    def get_url():
+        while 1:
+            url = input(f'Enter URL: ')
+            if len(url) <= 0:
+                print(f'ERROR! Please enter correct URL!')
+                continue
+            return url

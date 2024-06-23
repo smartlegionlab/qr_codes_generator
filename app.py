@@ -15,11 +15,13 @@ def main():
 
     img_path = app_manager.get_image_path()
     save_folder = app_manager.get_save_folder()
-
+    url = app_manager.get_url()
     app_manager.printer.echo()
     print(f'Path to image file: {img_path}')
     app_manager.printer.echo()
     print(f'Path to the folder to save the final file: {save_folder}')
+    app_manager.printer.echo()
+    print(f'URL: {url}')
     app_manager.printer.echo()
 
     app_manager.show_footer()
