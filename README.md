@@ -23,7 +23,7 @@ After launch:
 
 Example:
 
-<img alt="Smart Legion Lab" src="data/images/smartlegionlab.png">
+![logo](https://github.com/smartlegionlab/qr_codes_generator/raw/master/data/images/smartlegionlab.png)
 
 ***
 
