@@ -1,18 +1,18 @@
 # --------------------------------------------------------
 # Licensed under the terms of the BSD 3-Clause License
 # (see LICENSE for details).
-# Copyright © 2024-2025, A.A. Suvorov
+# Copyright © 2026, Alexander Suvorov
 # All rights reserved.
 # --------------------------------------------------------
 # https://github.com/smartlegionlab/
 # --------------------------------------------------------
 import os
 
-from tools.config import AppConfig
-from tools.printer import SmartPrinter
+from core.config import AppConfig
+from core.printer import SmartPrinter
 import readline
 
-from tools.qr_code_master import QrCodeMaster
+from core.qr_code_master import QrCodeMaster
 
 
 def input_with_completion(prompt):
